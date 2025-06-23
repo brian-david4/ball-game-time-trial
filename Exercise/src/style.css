@@ -1,0 +1,92 @@
+html,
+body,
+#root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: ivory;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url(./PPNeueMontreal-Book.otf);
+}
+
+.interface {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  font-family: "Neue Montreal";
+}
+.time {
+  position: absolute;
+  bottom: 37.2%;
+  left: 30%;
+  font-size: 24px;
+  user-select: none;
+  mix-blend-mode: difference;
+  color: aliceblue;
+}
+.restart {
+  position: absolute;
+  right: 15%;
+  top: 15%;
+  mix-blend-mode: difference;
+  color: aliceblue;
+  cursor: pointer;
+  pointer-events: all;
+}
+.highScore {
+  position: absolute;
+  left: 1%;
+  bottom: 1%;
+  color: #fff200;
+  mix-blend-mode: difference;
+}
+
+/* keyboard */
+
+.controls {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+}
+
+.controls .raw {
+  display: flex;
+  justify-content: center;
+}
+
+.controls .key {
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  border: 2px solid #ffff00;
+  background: #07304ea3;
+  text-align: center;
+}
+.key {
+  mix-blend-mode: difference;
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: "Neue Montreal";
+  transition: all 1.5s ease-out;
+}
+.controls .key.large {
+  width: 144px;
+  border-radius: 10px;
+}
+
+.controls .key.active {
+  color: black;
+  background: #fff200;
+}
